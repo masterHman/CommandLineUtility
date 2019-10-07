@@ -28,6 +28,14 @@ namespace CommandLineUtility
                     Console.WriteLine(rename.ErrorMessage);
                 }
             }
+            else if (args.HasArg("AppendRubric"))
+            {
+                var rename = new CommandLineOptions.AppendRubric(args);
+                if (!rename.Execute())
+                {
+                    Console.WriteLine(rename.ErrorMessage);
+                }
+            }
             Environment.Exit(0);
         }
     }
